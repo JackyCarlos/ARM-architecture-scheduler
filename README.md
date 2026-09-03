@@ -172,7 +172,7 @@ setup_stack:
 
     sub R13, R13, #0x14     ; move the stack pointer 5 registers r12, r3, r2, r1, r0 caller-saved
 
-    // for security the new task is not allowed to read the callee-saved registers
+    ; for security the new task is not allowed to read the callee-saved registers
     MOV r4, #0
     MOV r5, #0
     MOV r6, #0
