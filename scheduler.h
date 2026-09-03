@@ -11,14 +11,7 @@ typedef struct  {
     // Flags for the scheduler
     uint8_t first_start; // this function should not be rescheduled but started from the "start_function pointer"
     uint8_t enabled; // If the task is used at all.
-} task_struct;
-
-typedef struct {
-    uint32_t *stack_pointer;
-    void (*start_function)(void);
-} schedule_result_t;
-
-
+} task_t;
 
 void init_tasks();
 void add_task(void (*function), uint8_t task_id);
